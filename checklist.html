@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checklist</title>
+    <style>
+        .question-box {
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        .yes {
+            background-color: green;
+        }
+        .no {
+            background-color: rgb(236, 236, 236);
+        }
+
+        .logo-container {
+      display: flex;
+      align-items: center;
+      position: static;
+      top: 20px;
+      left: 20px;
+    }
+
+    .logo {
+      width: 80px; /* Adjust the width as per your logo size */
+      height: 60px;
+      vertical-align: middle;
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+      margin-left: 10px;
+      color: #00ccc2; /* Light green color */
+    }
+    h1 {
+      color: #0059ff;
+      font-size: 48px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    </style>
+</head>
+<body>
+  <!-- Logo and Text -->
+  <div class="logo-container">
+    <img class="logo" src="C:\Users\USER\Downloads\webstocks.png" alt="Logo">
+    <span class="logo-text">webstocks.com</span>
+  </div>
+
+    <h1>Checklist</h1>
+
+    <div class="question-box no">1. Does the company have product or services with suffecient market potential to make sizeable increase in scales in near future?</div>
+    <div class="question-box no">2. Does the management have the determination to continue to develop NEW products that will further increase sales when the growth potentials of current products have been exposed?</div>
+    <div class="question-box no">3. How effective are the company's Reseach and development efforts in relation to its size?</div>
+    <div class="question-box no">4. Does the company have an above average sales organization?</div>
+    <div class="question-box no">5. Does the company have a worthwhile profit margin?</div>
+    <div class="question-box no">6. What is the company doing to maintain or improve it's profit margin?</div>
+    <div class="question-box no">7. Does the company have outstanding labor and personnel relation?</div>
+    <div class="question-box no">8. Does the company have outstanding executive relations?</div>
+    <div class="question-box no">9. Deos the company have depth to its management?</div>
+    <div class="question-box no">10. How good are company's cost analysis and accounting control?</div>
+    <div class="question-box no">11. Are there other indicators as to how outstanding the company may be relative to its competitors?</div>
+    <div class="question-box no">12. Does the company have short range or a long range outlook in regardsto profits?</div>
+    <div class="question-box no">13. Will growth require any financing that will dilute existing shareholders?</div>
+    <div class="question-box no">14. Does the management talk freely to investors about its affairs when things are going well but "clam up" when troubles and disappointment occur?</div>
+    <div class="question-box no">15. Does the company have a management of unquestionable integrity?</div>
+
+    <h2>Score: <span id="score">0</span>/15</h2>
+
+    <script>
+        // Count the number of questions with "Yes" answers
+        function updateScore() {
+            const questionBoxes = document.querySelectorAll('.question-box');
+            let score = 0;
+            questionBoxes.forEach(function(box) {
+                if (box.classList.contains('yes')) {
+                    score++;
+                }
+            });
+            document.getElementById('score').textContent = score;
+        }
+
+        // Add event listeners to question boxes
+        const questionBoxes = document.querySelectorAll('.question-box');
+        questionBoxes.forEach(function(box) {
+            box.addEventListener('click', function() {
+                box.classList.toggle('yes');
+                box.classList.toggle('no');
+                updateScore();
+            });
+        });
+    </script>
+</body>
+</html>

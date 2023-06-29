@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Webstocks</title>
+  <style>
+    /* Add some basic styles for the menu and image */
+    body {
+      margin: 0;
+      padding: 50px;
+      font-family: Arial, sans-serif;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    
+    #menu {
+      background-color: #353535;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    #menu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    #menu ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    #menu ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+      position: static;
+      top: 20px;
+      left: 20px;
+    }
+
+    .logo {
+      width: 80px; /* Adjust the width as per your logo size */
+      height: 60px;
+      vertical-align: middle;
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+      margin-left: 10px;
+      color: #00ccc2; /* Light green color */
+    }
+
+    h1 {
+      color: #0059ff;
+      font-size: 48px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    p {
+      color: #000000;
+      font-size: 20px;
+      text-align: LEFT;
+      margin-top: 20px;
+    }
+
+    #image {
+      text-align: center;
+      margin-top: 50px;
+
+    }
+
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background-color: #f1f1f1;
+      position: fixed;
+      left: -200px;
+      transition: left 0.3s ease;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .sidebar-content {
+      padding: 20px;
+    }
+
+    .toggle-btn {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 50px;
+      cursor: pointer;
+      background-color: #f1f1f1;
+      border-bottom: 1px solid #ccc;
+      font-size: 24px;
+      padding-right: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Logo and Text -->
+  <div class="logo-container">
+    <img class="logo" src="C:\Users\USER\Downloads\webstocks.png" alt="Logo">
+    <span class="logo-text">webstocks.com</span>
+  </div>
+
+  <div class="sidebar">
+    <div class="toggle-btn" onclick="toggleSidebar()">
+        &vellip;
+    <span></span>
+    <span></span>
+    <span></span>
+    </div>
+    <div class="sidebar-content">
+    <ul class="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Checklist</a></li>
+    <li><a href="#">Expert Meet</a></li>
+    <li><a href="https://sites.google.com/view/webstock4/home">Financial Calculators</a></li>
+    </ul>
+    </div>
+    </div>
+    
+
+  <!-- Menu Bar -->
+  <div id="menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Learn</a></li>
+      <li><a href="#">About Us</a></li>
+    </ul>
+  </div>
+
+  <!-- Image -->
+  <div id="image">
+    <img src="C:\Users\USER\Downloads\webstocks\Webstock bgimage.jpg" alt="Webstocks Image">
+  </div>
+  <!-- Content Section -->
+  <div class="content">
+    <h1>Welcome to Webstock</h1>
+    <p>Empowering New Investors with Research Skills</p>
+    <p>Are you a new investor eager to make informed decisions? Look no further! At Webstock, we are dedicated to equipping you with the knowledge and tools you need to confidently research and evaluate companies. Whether you're delving into the world of stocks, bonds, or other investment opportunities, our comprehensive resources and expert guidance will set you on the right path.</p>
+    <p>Why is Research Important?</p>
+    <p>Smart investment decisions are built on a foundation of thorough research. Conducting proper due diligence allows you to assess a company's financial health, growth potential, competitive landscape, and overall stability. By understanding these key aspects, you can make well-informed choices that align with your investment goals.</p>
+    <p>How to Research a Company?</p>
+    <p>We've got you covered! Our step-by-step guides and tutorials provide a systematic approach to researching companies. We cover a wide range of essential topics, including:</p>
+    <ol>
+      <li>Financial Statements Analysis: Learn how to interpret balance sheets, income statements, and cash flow statements to gauge a company's financial performance.</li>
+      <li>Industry Analysis: Gain insights into specific industries and their dynamics to identify trends, opportunities, and potential risks.</li>
+      <li>Competitive Analysis: Explore strategies to evaluate a company's position within its industry, analyzing its competitors, market share, and unique selling propositions.</li>
+      <li>Management Assessment: Discover techniques for evaluating a company's leadership, including the management team's experience, track record, and vision.</li>
+      <li>Corporate Governance: Understand the importance of ethical practices, transparency, and accountability within a company's governance structure.</li>
+    </ol>
+    <p>Explore Further:</p>
+    <p>Ready to dive deeper? Check out our recommended resources and reference materials to enhance your research capabilities. To further expand your knowledge, we highly recommend visiting Tickertape, a trusted website that provides valuable insights and tools for investors.</p>
+    <a href="https://www.tickertape.in\">Tickertape</a>
+    <p>Join Our Community:</p>
+    <p>Connect with like-minded individuals and experienced investors in our vibrant community forum. Share ideas, ask questions, and engage in discussions to expand your understanding of the investment landscape.</p>
+    <p>Start Your Research Journey with Webstock Today!</p>
+    <p>Investing wisely begins with solid research. Visit Webstock now to access our comprehensive resources, expert guidance, and invaluable tips for mastering the art of company analysis. Empower yourself with the knowledge to make confident investment decisions.</p>
+  </div>
+
+  <!-- Rest of your website content goes here -->
+
+  <script>
+    function toggleSidebar() {
+var sidebar = document.querySelector('.sidebar');
+sidebar.classList.toggle('open');
+    }
+</script>
+</body>
+</html>
+

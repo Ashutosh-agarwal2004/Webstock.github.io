@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Meet the Stock Market Experts</title>
+    <script>
+        function generateEmailText() {
+            var subject = document.getElementById('subject').value;
+            var emailText = '';
+
+            if (subject === 'general') {
+                emailText = "Dear Expert,\n\nI would like to seek your guidance and expertise in the field of stock market investments. I am interested in learning more about the strategies and approaches that can help me make informed investment decisions.\n\nThank you in advance for your valuable insights.\n\nSincerely,\n[Your Name]";
+            } else if (subject === 'investment advice') {
+                emailText = "Dear Expert,\n\nI am reaching out to you to seek your expert opinion on my investment portfolio. I would appreciate any advice or recommendations you can provide regarding potential stocks or investment opportunities that align with my financial goals.\n\nThank you for your time and assistance.\n\nBest regards,\n[Your Name]";
+            } else if (subject === 'market trends') {
+                emailText = "Dear Expert,\n\nI have been closely following the stock market trends and would like to hear your thoughts on the current market conditions. It would be valuable to gain insights from your experience regarding the potential opportunities and risks in the market.\n\nThank you for your time and expertise.\n\nKind regards,\n[Your Name]";
+            }
+
+            document.getElementById('email-text').textContent = emailText;
+        }
+    </script>
+</head>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+    .logo-container {
+      display: flex;
+      align-items: center;
+      position: static;
+      top: 20px;
+      left: 20px;
+    }
+
+    .logo {
+      width: 80px; /* Adjust the width as per your logo size */
+      height: 60px;
+      vertical-align: middle;
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+      margin-left: 10px;
+      color: #00ccc2; /* Light green color */
+    }
+
+    h1 {
+      color: #494b49;
+      font-size: 48px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    </style>
+</head>
+<body>
+
+     <!-- Logo and Text -->
+  <div class="logo-container">
+    <img class="logo" src="C:\Users\USER\Downloads\webstocks.png" alt="Logo">
+    <span class="logo-text">webstocks.com</span>
+  </div>
+
+    <h1>Meet the Stock Market Experts</h1>
+    <div class="wmail">
+    <h2>Contact Warren Buffett</h2>
+    <p>Email: warrenbuffett@example.com</p>
+    <p><a href="mailto:warrenbuffett@example.com">Send Email</a></p>
+</div> 
+    <h2>Contact Indian Stock Market Expert</h2>
+    <p>Email: indianexpert@example.com</p>
+    <p><a href="mailto:indianexpert@example.com">Send Email</a></p>
+
+    <h2>Email Form</h2>
+    <p>
+        <label for="subject">Select a subject:</label>
+        <select id="subject">
+            <option value="general">General Inquiry</option>
+            <option value="investment advice">Investment Advice</option>
+            <option value="market trends">Market Trends</option>
+        </select>
+    </p>
+    <p>
+        <button onclick="generateEmailText()">Generate Email Text</button>
+    </p>
+    <p>
+        <label for="email-text">Email Text:</label>
+        <textarea id="email-text" rows="6" cols="50" readonly></textarea>
+    </p>
+</body>
+
+</html>
+
